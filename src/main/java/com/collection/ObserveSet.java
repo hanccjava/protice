@@ -18,7 +18,11 @@ public class ObserveSet {
         set.add(new Person("王五", 10));
         System.out.println(set);
     }
-    public static void ObserveTreeSet(){
+
+    /**
+     * 使用TreeSet，其插入的对象必须实现Comparable接口，或者使用Comparator比较器
+     */
+    public static void ObserveTreeSet() {
         Set<Person> set = new TreeSet<Person>();
         set.add(new Person("张三", 20));
         set.add(new Person("李四", 50));
@@ -29,6 +33,7 @@ public class ObserveSet {
         strings.add("王五");
         strings.add("李四");
         System.out.println(strings);
+
     }
 
     public static void main(String[] args) {
