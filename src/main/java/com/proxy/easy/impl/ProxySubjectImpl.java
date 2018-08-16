@@ -5,7 +5,7 @@ import com.proxy.easy.interfaces.ISubject;
 
 /**
  * 代理对象
- * Created by txsk on 2018/8/15.
+ * Created by hpy on 2018/8/15.
  */
 public class ProxySubjectImpl implements ISubject {
     /**
