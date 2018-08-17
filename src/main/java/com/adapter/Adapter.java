@@ -6,6 +6,7 @@ package com.adapter;
 public class Adapter extends DispatchingCake implements IEat {
     @Override
     public void eatCake() {
+        //有配送的方法，只是不完美，所以我要用到他，还要在此基础上补全它
         String a = makeDispatchingCake();
         StringBuffer buffer = new StringBuffer(a);
         buffer.append("->");
@@ -16,6 +17,7 @@ public class Adapter extends DispatchingCake implements IEat {
     }
 
     public static void main(String[] args) {
-        
+        IEat ieat = new Adapter();
+        ieat.eatCake();
     }
 }
