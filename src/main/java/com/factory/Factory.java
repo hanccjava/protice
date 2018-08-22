@@ -2,7 +2,6 @@ package com.factory;
 
 import com.factory.interfaces.IFruit;
 import com.factory.interfaces.IMessage;
-import com.proxy.easy.interfaces.ISubject;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -28,12 +27,16 @@ public class Factory {
      * @return
      */
     @SuppressWarnings("unchecked")
-    public static <E,T> E getInstance(String className, T parameter) {
+    public static <E> E getInstance(String className, Object parameter) {
         E object = null;
         try {
-            Class clazz = Class.forName(className);
-            //通过Class.getConstructor()获取Constructor对象
-            Constructor c = clazz.getDeclaredConstructor(ISubject.class);
+            /*
+            通过Class.getConstructor()获取Constructor对象
+            getClass获取当前运行时的类
+            getInterfaces该类所实现的所有接口的对象或该接口扩展的所有接口的对象，顺序与声明的 implements、extends 子句中的接口名顺序一致
+             */
+            Constructor c = Class.forName(className).getDeclaredConstructor(parameter.getClass().getInterfaces()[0]);
+            System.out.println(parameter.getClass());
             //通过Constructor.newInstance方法，获取有参构造
             object = (E) c.newInstance(parameter);
         } catch (Exception e) {
