@@ -43,6 +43,11 @@ public class ProxySubjectImpl implements ISubject {
         this.get();
     }
 
+    @Override
+    public void eat() {
+
+    }
+
     public static void main(String[] args) {
         ISubject subject = Factory.getInstance("com.proxy.easy.impl.ProxySubjectImpl","com.proxy.easy.impl.RealImpl");
         subject.save();

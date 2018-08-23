@@ -9,4 +9,6 @@ public interface ISubject {
      * 核心功能是救人
      */
     void save();
+    void eat();
+
 }

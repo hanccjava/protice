@@ -12,4 +12,9 @@ public class RealImpl implements ISubject {
     public void save() {
         System.out.println("我闯进了代理模式的大门");
     }
+
+    @Override
+    public void eat() {
+        System.out.println("我有信心把动态代理给吃透");
+    }
 }
