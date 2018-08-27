@@ -10,9 +10,8 @@
         <module name="txskhan" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="hanprotice" target="1.6" />
-      <module name="txskhan" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="hanprotice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
